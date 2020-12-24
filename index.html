@@ -5,6 +5,217 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="logo.png" />
 	<title>Le vert dans toute sa splendeur</title>
+	<!-- La feuille de style CSS est volontairement incluse ici et pas dans un fichier pour des soucis de cache. En prod, ce serait dans un style.css of course -->
+	<style type="text/css">
+		@font-face {
+			font-family: "Lucida-hw";
+			src: url("Lucida.TTF");
+		}
+		html {scroll-behavior: smooth; scroll-padding: 13vh 0px 0px 0px;}
+		body {
+			margin: 0;
+			overflow: -moz-scrollbars-none; /* Mozzilla compatiblity for the following AND I DON'T FUCKING CARE ABOUT IE */
+
+			background-image: url("favicon.png");
+			background-size: cover;
+		}
+
+		body::-webkit-scrollbar { width: 0 !important }
+
+
+		.content {
+			text-align: center;
+			width: 100vw!important;
+			background-color: #171717e0!important;
+		}
+
+		/* Titles */
+		.title-thegreen {
+			font-size: 10vw;
+		}
+		.title-colors {
+			font-size: 5vw;
+		}
+		.title-history {
+			font-size: 10vw;
+		}
+		.title {
+			font-family: "Lucida-hw";
+			background: linear-gradient(90deg, rgba(0,255,4,1) 0%, rgba(24,199,0,1) 43%, rgba(6,175,0,1) 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		/* The green */
+		.thegreen-text {
+			width: 75vw;
+			text-align: center;
+
+			font-size: 2.5vw;
+
+			display: inline-block;
+			background-color: #1717172e;
+			border-radius: 15px;
+		}
+		.thegreen {
+			padding-top: 12.3vh; /*On se décale pour être en dessous de la navbar*/
+		}
+
+		
+		/* Colors */
+		.colors {
+			width: 75vw;
+			text-align: center;
+
+			display: inline-block;
+		}
+
+		.each-colors {
+			color: white;
+			font-weight: 600;
+			display: table-cell;
+			padding: 3vw;
+			width: 12.5vw;
+		}
+		.colors-text {
+			width: 75vw;
+			text-align: center;
+
+			font-size: 2vw;
+
+			display: inline-block;
+			background-color: #1717172e;
+			border-radius: 15px;
+		}
+
+		.canva {
+			width: 12vw;
+			height: 8vh;
+			border-radius: 10px;
+			border: solid;
+		}
+
+		/* History */
+		.history {
+
+		}
+		.history-text {
+			width: 75vw;
+			text-align: center;
+
+			font-size: 2.5vw;
+
+			display: inline-block;
+			background-color: #1717172e;
+			border-radius: 15px;
+		}
+
+		/* Navbar */
+		header {
+			top: 0;
+			position: fixed;
+			width: 100vw;
+			height: 8vh;
+
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			background-color: #3a3a3af0;
+		}
+		.navbar-icon {
+			width: 25%;
+			height: 10.5vh;
+
+			padding-left: 2em;
+
+			background-image: url("logo.png");
+			background-repeat: no-repeat;
+			background-size: 3.5rem;
+			background-origin: content-box;
+		}
+		.navbar-links ul {
+			font-size: 2.5vw;
+			font-weight: 500;
+
+			margin: 0;
+
+			text-decoration: none;
+			display: flex;
+			justify-content: flex-end;
+			align-content: center;
+		}
+		.navbar-links li {
+			color: white;
+			list-style: none;
+			cursor: pointer;
+		}
+		.navbar-links li:hover {
+			background: -webkit-linear-gradient(67.5deg, #00ff00, #008c00);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		.navbar-links {
+			width: 75%;
+			height: 6vh;
+			padding-right: 1em
+		}
+
+		/* Footer */
+		footer {
+
+			width: 100vw;
+			height: 1.5rem;
+			background-color: #3a3a3afc;
+
+			color: #ffffff96;
+			text-align: center;
+			font-size: 1.15em;
+		}
+
+		/* Responsive improvment */
+		/* For Mobile */
+		@media screen and (max-width: 540px) {
+		    #computer {
+		    	display: none!important;
+		    }
+		    #phone {
+		    	display: block;
+		    	height: unset!important;
+		    }
+		    .navbar-links ul {
+		    	font-size: 3.3vw!important;
+		    }
+
+		    .thegreen-text {
+		    	font-size: 5vw!important;
+		    }
+		    .colors-text {
+		    	font-size: 3vw!important;
+		    }
+		    .history-text {
+		    	font-size: 5vw!important;
+		    }
+		    .navbar-icon {
+		    	padding-top: 1.5vh!important;
+		    	background-size: 3.5rem!important;
+		    }
+			.canva {
+				width: 18vw;
+				height: 5vh;
+			}
+			footer {
+				font-size: 1rem!important;
+			}
+		}
+		/* For bigger screens */
+		@media screen and (min-width: 540px) {
+		    #computer {
+		    	display: block;
+		    }
+		    #phone {
+		    	display: none!important;
+		    }
+		}
+	</style>
 </head>
 <body>
 	
@@ -901,214 +1112,3 @@
 
 </body>
 </html>
-
-<style type="text/css"> /* La feuille de style CSS est volontairement inclus dans ce fichier pour des soucis de cache. */
-	@font-face {
-		font-family: "Lucida-hw";
-		src: url("Lucida.TTF");
-	}
-	html {scroll-behavior: smooth; scroll-padding: 13vh 0px 0px 0px;}
-	body {
-		margin: 0;
-		overflow: -moz-scrollbars-none; /* Mozzilla compatiblity for the following AND I DON'T FUCKING CARE ABOUT IE */
-
-		background-image: url("favicon.png");
-		background-size: cover;
-	}
-
-	body::-webkit-scrollbar { width: 0 !important }
-
-
-	.content {
-		text-align: center;
-		width: 100vw!important;
-		background-color: #171717e0!important;
-	}
-
-/* Titles */
-	.title-thegreen {
-		font-size: 10vw;
-	}
-	.title-colors {
-		font-size: 5vw;
-	}
-	.title-history {
-		font-size: 10vw;
-	}
-	.title {
-		font-family: "Lucida-hw";
-		background: linear-gradient(90deg, rgba(0,255,4,1) 0%, rgba(24,199,0,1) 43%, rgba(6,175,0,1) 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-/* The green */
-	.thegreen-text {
-		width: 75vw;
-		text-align: center;
-
-		font-size: 2.5vw;
-
-		display: inline-block;
-		background-color: #1717172e;
-		border-radius: 15px;
-	}
-	.thegreen {
-		padding-top: 12.3vh; /*On se décale pour être en dessous de la navbar*/
-	}
-
-	
-/* Colors */
-	.colors {
-		width: 75vw;
-		text-align: center;
-
-		display: inline-block;
-	}
-
-	.each-colors {
-		color: white;
-		font-weight: 600;
-		display: table-cell;
-		padding: 3vw;
-		width: 12.5vw;
-	}
-	.colors-text {
-		width: 75vw;
-		text-align: center;
-
-		font-size: 2vw;
-
-		display: inline-block;
-		background-color: #1717172e;
-		border-radius: 15px;
-	}
-
-	.canva {
-		width: 12vw;
-		height: 8vh;
-		border-radius: 10px;
-		border: solid;
-	}
-
-/* History */
-	.history {
-
-	}
-	.history-text {
-		width: 75vw;
-		text-align: center;
-
-		font-size: 2.5vw;
-
-		display: inline-block;
-		background-color: #1717172e;
-		border-radius: 15px;
-	}
-
-/* Navbar */
-	header {
-		top: 0;
-		position: fixed;
-		width: 100vw;
-		height: 8vh;
-
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		background-color: #3a3a3af0;
-	}
-	.navbar-icon {
-		width: 25%;
-		height: 10.5vh;
-
-		padding-left: 2em;
-
-		background-image: url("logo.png");
-		background-repeat: no-repeat;
-		background-size: 3.5rem;
-		background-origin: content-box;
-	}
-	.navbar-links ul {
-		font-size: 2.5vw;
-		font-weight: 500;
-
-		margin: 0;
-
-		text-decoration: none;
-		display: flex;
-		justify-content: flex-end;
-		align-content: center;
-	}
-	.navbar-links li {
-		color: white;
-		list-style: none;
-		cursor: pointer;
-	}
-	.navbar-links li:hover {
-		background: -webkit-linear-gradient(67.5deg, #00ff00, #008c00);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	.navbar-links {
-		width: 75%;
-		height: 6vh;
-		padding-right: 1em
-	}
-
-/* Footer */
-	footer {
-
-		width: 100vw;
-		height: 1.5rem;
-		background-color: #3a3a3afc;
-
-		color: #ffffff96;
-		text-align: center;
-		font-size: 1.15em;
-	}
-
-/* Responsive improvment */
-	/* For Mobile */
-	@media screen and (max-width: 540px) {
-	    #computer {
-	    	display: none!important;
-	    }
-	    #phone {
-	    	display: block;
-	    	height: unset!important;
-	    }
-	    .navbar-links ul {
-	    	font-size: 3.3vw!important;
-	    }
-
-	    .thegreen-text {
-	    	font-size: 5vw!important;
-	    }
-	    .colors-text {
-	    	font-size: 3vw!important;
-	    }
-	    .history-text {
-	    	font-size: 5vw!important;
-	    }
-	    .navbar-icon {
-	    	padding-top: 1.5vh!important;
-	    	background-size: 3.5rem!important;
-	    }
-		.canva {
-			width: 18vw;
-			height: 5vh;
-		}
-		footer {
-			font-size: 1rem!important;
-		}
-	}
-	/* For bigger screens */
-	@media screen and (min-width: 540px) {
-	    #computer {
-	    	display: block;
-	    }
-	    #phone {
-	    	display: none!important;
-	    }
-	}
-</style>
